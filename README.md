@@ -76,7 +76,7 @@ images/
 ## System Architecture
 
 <p align="center">
-  <img src="images/block_diagram.png" width="800">
+  <img src="images/fsmCompleted.jpg" width="800">
 </p>
 
 The game consists of several independent hardware modules:
