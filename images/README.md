@@ -1,1 +1,1 @@
-Images for the project.
+Images, videos, and supporting material for the project.
