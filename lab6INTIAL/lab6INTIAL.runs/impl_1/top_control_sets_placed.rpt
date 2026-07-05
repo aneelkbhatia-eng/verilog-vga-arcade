@@ -1,0 +1,92 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Mar  5 13:06:15 2026
+| Host         : AneelWindow running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    23 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    14 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             159 |           64 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              80 |           31 |
+| Yes          | No                    | No                     |              32 |           16 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              98 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+-----------------------------------------+------------------------+------------------+----------------+--------------+
+|         Clock Signal         |              Enable Signal              |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------+-----------------------------------------+------------------------+------------------+----------------+--------------+
+|  not_so_slow/slowclk/clk_out | PA/VPX_counter/ff0_0                    | btnU_IBUF              |                1 |              2 |         2.00 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_38/I_36_31_n_0 |                        |                2 |              4 |         2.00 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_40/CEO         |                        |                3 |              4 |         1.33 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_45/CEO         |                        |                1 |              4 |         4.00 |
+|  not_so_slow/slowclk/clk_out | not_so_slow/slowclk/XLXI_39/CEO         |                        |                2 |              4 |         2.00 |
+|  not_so_slow/slowclk/clk_out | APPLE_FSM0/inc0                         | APPLE_FSM0/flash_rst_0 |                5 |             16 |         3.20 |
+|  not_so_slow/slowclk/clk_out | APPLE_FSM0/inc021_out                   | APPLE_FSM0/ramp_rst_0  |                6 |             16 |         2.67 |
+|  not_so_slow/slowclk/clk_out | APPLE_FSM0/st3_1                        | APPLE_FSM0/wait_rst_0  |                4 |             16 |         4.00 |
+|  not_so_slow/slowclk/clk_out | APPLE_FSM1/st3_1                        | APPLE_FSM1/wait_rst_1  |                5 |             16 |         3.20 |
+|  not_so_slow/slowclk/clk_out | APPLE_FSM1/inc030_out                   | APPLE_FSM1/flash_rst_1 |                4 |             16 |         4.00 |
+|  not_so_slow/slowclk/clk_out | PA/HPX_counter/en_ff                    |                        |                8 |             16 |         2.00 |
+|  not_so_slow/slowclk/clk_out | PA/HPX_counter/inc032_out               | APPLE_FSM1/ramp_rst_1  |                5 |             16 |         3.20 |
+|  not_so_slow/slowclk/clk_out |                                         | btnU_IBUF              |               31 |             80 |         2.58 |
+|  not_so_slow/slowclk/clk_out |                                         |                        |               64 |            159 |         2.48 |
++------------------------------+-----------------------------------------+------------------------+------------------+----------------+--------------+
+
+
